@@ -53,5 +53,64 @@ tr {
 }
 
 .card {
-  width: 18rem;
+  margin: 10px;
+  width: 25rem;
+  text-align: center;
+  background-color: #e7e7e7;
+  border-radius: 5px;
+}
+.card img {
+  margin: 10px auto;
+  width: 24rem;
+  height: 17rem;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.cards {
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.dataCentered {
+  text-align: center;
+}
+
+.headerLogo {
+  text-align: right;
+  height: 70px;
+}
+.headerLogo img {
+  margin: 10px;
+  height: 125px;
+}
+
+.infoText {
+  margin: 10px;
+  height: 75%;
+  text-align: justify;
+}
+
+.infoTitle {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.contactInfo {
+  list-style-type: none;
+  text-align: center;
+  display: block;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a.btn.btn-primary {
+  justify-content: flex-end;
+  display: flex;
 }
