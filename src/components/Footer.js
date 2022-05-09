@@ -4,7 +4,7 @@ const Footer = props => {
   return (
     <ul className="contactInfo">
       {props.contactInfo.map(prop => (
-        <li>{prop}</li>
+        <li key={prop}>{prop}</li>
       ))}
     </ul>
   );
