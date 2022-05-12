@@ -39,7 +39,12 @@ const TouristInfoCards = () => {
           <div className="card-body">
             <h2 className="infoTitle">{city.cityName}</h2>
             <p className="infoText">{city.cityInfo}</p>
-            <a href={city.link} target="_blank" className="btn btn-primary">
+            <a
+              href={city.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+            >
               Go {city.cityName}
             </a>
           </div>
