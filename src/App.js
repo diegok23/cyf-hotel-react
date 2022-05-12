@@ -18,7 +18,6 @@ const App = () => {
     <div className="App">
       <Heading />
       <Bookings />
-      <Restaurant />
       <TouristInfoCards />
       <Footer contactInfo={footer} />
     </div>
