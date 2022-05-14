@@ -59,10 +59,11 @@ tr {
   background-color: #e7e7e7;
   border-radius: 5px;
 }
+
 .card img {
   margin: 10px auto;
-  width: 24rem;
-  height: 17rem;
+  width: 20rem;
+  height: 13rem;
   overflow: hidden;
   border-radius: 5px;
 }
@@ -80,8 +81,9 @@ tr {
 
 .headerLogo {
   text-align: right;
-  height: 70px;
+  height: 40px;
 }
+
 .headerLogo img {
   margin: 10px;
   height: 125px;
@@ -102,6 +104,7 @@ tr {
   list-style-type: none;
   text-align: center;
   display: block;
+  background-color: #dddddd;
 }
 
 .card-body {
@@ -113,4 +116,38 @@ tr {
 a.btn.btn-primary {
   justify-content: flex-end;
   display: flex;
+}
+
+.restaurantStyle {
+  text-align: center;
+}
+
+.restaurantStyle h3 {
+  background-color: #8e8e8e;
+  text-align: center;
+}
+
+.orderList {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  margin: 5px;
+}
+
+.restaurantList {
+  text-align: center;
+  width: 300px;
+  padding: 3px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.selectedRow {
+  background-color: black;
+  color: white;
+}
+
+ul.contactInfo {
+  margin-bottom: 0px;
 }

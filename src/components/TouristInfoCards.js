@@ -28,7 +28,7 @@ const cities = [
 ];
 const TouristInfoCards = () => {
   return (
-    <div className="cards">
+    <div className="container cards">
       {cities.map(city => (
         <div key={city.cityName} className="card">
           <img
