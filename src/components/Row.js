@@ -26,6 +26,11 @@ const Row = props => {
       <td className="dataCentered">
         {nights(props.data.checkOutDate, props.data.checkInDate)}
       </td>
+      <td>
+        <button onClick={() => props.handleClickProfile(props.data.id)}>
+          Show Profile
+        </button>
+      </td>
     </tr>
   );
 };
