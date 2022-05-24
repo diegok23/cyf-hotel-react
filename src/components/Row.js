@@ -27,7 +27,10 @@ const Row = props => {
         {nights(props.data.checkOutDate, props.data.checkInDate)}
       </td>
       <td>
-        <button onClick={() => props.handleClickProfile(props.data.id)}>
+        <button
+          className="btn btn-primary"
+          onClick={() => props.setSelectedId(props.data.id)}
+        >
           Show Profile
         </button>
       </td>
