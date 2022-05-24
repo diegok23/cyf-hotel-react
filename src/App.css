@@ -151,3 +151,8 @@ a.btn.btn-primary {
 ul.contactInfo {
   margin-bottom: 0px;
 }
+
+.loading {
+  text-align: center;
+  margin: 20px auto;
+}

@@ -3,21 +3,29 @@ import Search from "./Search.js";
 import SearchResults from "./SearchResults";
 
 const Bookings = () => {
-  const [initialBookings, setInitialBookings] = useState([]);
   const [bookings, setBookings] = useState([]);
+  const [initialBookings, setInitialBookings] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
   const API_URL = "https://cyf-react.glitch.me";
+  const API_URL_DELAY = "https://cyf-react.glitch.me/delayed";
+  const API_URL_ERROR = "https://cyf-react.glitch.me/error";
 
   useEffect(() => {
-    fetch(API_URL)
+    setLoading(true);
+    fetch(API_URL_DELAY)
       .then(res => res.json())
       .then(data => {
         setBookings(data);
         setInitialBookings(data);
+        setLoading(false);
       })
-      .catch(error => console.log(error));
+      .catch(err => {
+        console.log(err);
+        setError(err.error);
+        setLoading(false);
+      });
   }, []);
 
   const search = searchVal => {
@@ -34,7 +42,7 @@ const Bookings = () => {
   };
 
   return loading ? (
-    <h1>Loading...</h1>
+    <h1 className="loading">Please wait, data is loading...</h1>
   ) : (
     <div className="App-content">
       <div className="container">
