@@ -14,12 +14,17 @@ const Bookings = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch(API_URL_DELAY)
+    fetch(API_URL)
       .then(res => res.json())
       .then(data => {
-        setBookings(data);
-        setInitialBookings(data);
-        setLoading(false);
+        if (data.error) {
+          setLoading(false);
+          setError(data.error);
+        } else {
+          setBookings(data);
+          setInitialBookings(data);
+          setLoading(false);
+        }
       })
       .catch(err => {
         console.log(err);
@@ -29,7 +34,7 @@ const Bookings = () => {
   }, []);
 
   const search = searchVal => {
-    if (searchVal.lenght === 0) {
+    if (searchVal === "") {
       setBookings(initialBookings);
       return;
     }
@@ -43,6 +48,8 @@ const Bookings = () => {
 
   return loading ? (
     <h1 className="loading">Please wait, data is loading...</h1>
+  ) : error ? (
+    <h1 className="error">{error}</h1>
   ) : (
     <div className="App-content">
       <div className="container">

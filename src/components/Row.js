@@ -21,14 +21,14 @@ const Row = props => {
       <td>{props.data.surname}</td>
       <td>{props.data.email}</td>
       <td className="dataCentered">{props.data.roomId}</td>
-      <td className="dataCentered">{props.data.checkInDate}</td>
-      <td className="dataCentered">{props.data.checkOutDate}</td>
+      <td className="dataCenteredDay">{props.data.checkInDate}</td>
+      <td className="dataCenteredDay">{props.data.checkOutDate}</td>
       <td className="dataCentered">
         {nights(props.data.checkOutDate, props.data.checkInDate)}
       </td>
       <td>
         <button
-          className="btn btn-primary"
+          className="btn btn-primary profile"
           onClick={() => props.setSelectedId(props.data.id)}
         >
           Show Profile

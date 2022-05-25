@@ -79,6 +79,11 @@ tr {
   text-align: center;
 }
 
+.dataCenteredDay {
+  text-align: center;
+  width: 130px;
+}
+
 .headerLogo {
   text-align: right;
   height: 40px;
@@ -155,4 +160,16 @@ ul.contactInfo {
 .loading {
   text-align: center;
   margin: 20px auto;
+}
+
+.error {
+  text-align: center;
+  margin: 20px auto;
+  color: red;
+}
+
+.profile {
+  color: black;
+  width: 120px;
+  padding: 0;
 }

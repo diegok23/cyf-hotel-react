@@ -12,7 +12,7 @@ const CustomerProfile = ({ id }) => {
 
   return (
     <ul>
-      <li>ID: {customer.id}</li>
+      <li>Customer ID: {customer.id}</li>
       <li>Email: {customer.email}</li>
       <li>VIP: {customer.vip ? "Yes" : "No"}</li>
       <li>Phone Number: {customer.phoneNumber}</li>
