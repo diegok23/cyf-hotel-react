@@ -10,15 +10,36 @@ const SearchResults = props => {
       <table className="table">
         <thead className="thead-light">
           <tr>
-            <th scope="col">id</th>
-            <th scope="col">Title</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Surname</th>
-            <th scope="col">Email</th>
-            <th scope="col">Room id</th>
-            <th scope="col">Check In Date</th>
-            <th scope="col">Check Out Date</th>
-            <th scope="col">Booking Days</th>
+            <th scope="col" onClick={() => props.onSortBookings("id")}>
+              id
+            </th>
+            <th scope="col" onClick={() => props.onSortBookings("title")}>
+              Title
+            </th>
+            <th scope="col" onClick={() => props.onSortBookings("firstName")}>
+              First Name
+            </th>
+            <th scope="col" onClick={() => props.onSortBookings("surname")}>
+              Surname
+            </th>
+            <th scope="col" onClick={() => props.onSortBookings("email")}>
+              Email
+            </th>
+            <th scope="col" onClick={() => props.onSortBookings("roomId")}>
+              Room id
+            </th>
+            <th scope="col" onClick={() => props.onSortBookings("checkInDate")}>
+              Check In Date
+            </th>
+            <th
+              scope="col"
+              onClick={() => props.onSortBookings("checkOutDate")}
+            >
+              Check Out Date
+            </th>
+            <th scope="col" onClick={() => props.onSortBookings("nights")}>
+              Booking Days
+            </th>
             <th scope="col">Show profile</th>
           </tr>
         </thead>
