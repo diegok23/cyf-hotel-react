@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import NewBookings from "./NewBookings.js";
 import Search from "./Search.js";
 import SearchResults from "./SearchResults";
 
@@ -46,6 +47,10 @@ const Bookings = () => {
     setBookings(filteredBookings);
   };
 
+  const handleAddToBooking = newBooking => {
+    setBookings([...bookings, newBooking]);
+  };
+
   return loading ? (
     <h1 className="loading">Please wait, data is loading...</h1>
   ) : error ? (
@@ -55,6 +60,10 @@ const Bookings = () => {
       <div className="container">
         <Search search={search} />
         {<SearchResults results={bookings} />}
+        <NewBookings
+          idNumber={bookings.length + 1}
+          onAddBooking={handleAddToBooking}
+        />
       </div>
     </div>
   );

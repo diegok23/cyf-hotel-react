@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Row from "./Row";
 import CustomerProfile from "./CustomerProfile";
+import Row from "./Row";
 
 const SearchResults = props => {
   const [selectedId, setSelectedId] = useState(undefined);
