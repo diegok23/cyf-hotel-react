@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Bookings from "./Bookings";
 
 const NewBookings = ({ onAddBooking, idNumber }) => {
   const [title, setTitle] = useState("");
@@ -113,7 +112,6 @@ const NewBookings = ({ onAddBooking, idNumber }) => {
       </form>
     </div>
   );
-  console.log({ firstName });
 };
 
 export default NewBookings;

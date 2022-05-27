@@ -60,29 +60,20 @@ const Bookings = () => {
   function compare(a, b, key, asc) {
     setOrder(!asc);
     let comparison = 0;
-    if (a[key] > b[key]) {
-      comparison = 1;
-    } else if (a[key] < b[key]) {
-      comparison = -1;
-    }
-    return asc === false ? comparison * -1 : comparison;
-  }
-
-  function compareValues(key, order = "asc") {
-    return function innerSort(a, b) {
-      if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) {
-        return 0;
-      }
-      const varA = typeof a[key] === "string" ? a[key].toUpperCase() : a[key];
-      const varB = typeof b[key] === "string" ? b[key].toUpperCase() : b[key];
-      let comparison = 0;
-      if (varA > varB) {
+    if (typeof [key] === "string") {
+      if (a[key].toLowerCase() > b[key].toLowerCase()) {
         comparison = 1;
-      } else if (varA < varB) {
+      } else if (a[key].toLowerCase() < b[key].toLowerCase()) {
         comparison = -1;
       }
-      return order === "desc" ? comparison * -1 : comparison;
-    };
+    } else {
+      if (a[key] > b[key]) {
+        comparison = 1;
+      } else if (a[key] < b[key]) {
+        comparison = -1;
+      }
+    }
+    return asc === false ? comparison * -1 : comparison;
   }
 
   return loading ? (
